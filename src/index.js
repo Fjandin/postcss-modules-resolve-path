@@ -40,7 +40,7 @@ function processDecl(decl, searchPaths) {
   }
 }
 
-export default postcss.plugin( 'modules-extract-imports', (options = {}) => {
+export default postcss.plugin( 'postcss-modules-resolve-path', (options = {}) => {
   const searchPaths = processOptions(options);
 
   return css => {
